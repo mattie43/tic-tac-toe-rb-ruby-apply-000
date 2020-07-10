@@ -36,7 +36,6 @@ def valid_move?(board, index)
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
@@ -116,6 +115,7 @@ end
 
 def play(board)
   until over?(board)
+    puts "Please enter 1-9:"
     turn(board)
   end
   if draw?(board)
